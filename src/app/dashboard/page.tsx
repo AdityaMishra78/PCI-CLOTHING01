@@ -28,18 +28,18 @@ function UserDashboardContent() {
 
   // Mock biometric signals data
   const biometrics = [
-    { name: "Kinetic Performance Index", val: "98.4%", icon: Target, desc: "OPTIMAL RANGE established" },
-    { name: "Max Aerobic Capacity (VO2)", val: "64.2 ml/kg", icon: Activity, desc: "HIGH-CAPACITY threshold" },
-    { name: "Sync Frequency Sync Rate", val: "99.8%", icon: ShieldCheck, desc: "NOISE_RATIO minimal" },
-    { name: "Active Heart Frequency", val: "72 BPM", icon: Heart, desc: "REST_CALIBRATED baseline" },
+    { name: "Daily Fitness Index", val: "98.4%", icon: Target, desc: "Excellent workout profile" },
+    { name: "Aerobic Capacity (VO2 Max)", val: "64.2 ml/kg", icon: Activity, desc: "High cardiovascular capacity" },
+    { name: "Apparel Battery Sync", val: "99.8%", icon: ShieldCheck, desc: "Garment sensor fully synced" },
+    { name: "Active Heart Rate", val: "72 BPM", icon: Heart, desc: "Calm baseline recovery" },
   ];
 
   // Neon Trajectory steps
   const orderSteps = [
-    { title: "Quantum Logged", desc: "Order entries logged in central ledger", status: "complete" },
-    { title: "Mesh Fabrication", desc: "Ultrasonic welding of dynamic grids", status: "complete" },
-    { title: "Laser Inscription", desc: "Silver logo stamp and sealing", status: "active" },
-    { title: "Drone Despatch Sync", desc: "Interstellar corridor delivery tracking", status: "pending" },
+    { title: "Order Received", desc: "Your order details have been successfully processed.", status: "complete" },
+    { title: "Tailoring & Assembly", desc: "Precision sewing and fabric bonding is complete.", status: "complete" },
+    { title: "Quality Check", desc: "Passing final visual inspection and premium stamp.", status: "active" },
+    { title: "Shipped Out", desc: "Handed over to carrier for premium fast delivery.", status: "pending" },
   ];
 
   return (
@@ -58,13 +58,13 @@ function UserDashboardContent() {
             <div>
               <div className="mb-3 flex w-fit items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[8px] font-black uppercase tracking-widest text-zinc-400">
                 <User size={10} />
-                ATHLETE DIAGNOSTIC PORTAL
+                ATHLETE DASHBOARD
               </div>
               <h1 className="text-3xl font-black uppercase tracking-widest text-white md:text-4xl font-sans">
                 Performance Lab
               </h1>
               <p className="mt-2 text-xs uppercase tracking-widest text-zinc-500 font-medium">
-                Review biometrics indices and calibrate apparel settings.
+                Review your daily fitness metrics and track active orders.
               </p>
             </div>
 
@@ -75,7 +75,7 @@ function UserDashboardContent() {
               </div>
               <div className="flex flex-col font-mono text-[9px] uppercase">
                 <span className="text-white font-bold">USER_ATHLETE_01</span>
-                <span className="text-emerald-400">GRID SYNCED: HIGH-FPS</span>
+                <span className="text-emerald-400">STATUS: ACTIVE MEMBERSHIP</span>
               </div>
             </div>
           </div>
@@ -91,7 +91,7 @@ function UserDashboardContent() {
               }`}
             >
               <Activity size={12} />
-              Biometrics HUD
+              My Fitness HUD
             </button>
             <button
               onClick={() => setActiveTab("ai-stylist")}
@@ -102,7 +102,7 @@ function UserDashboardContent() {
               }`}
             >
               <Sparkles size={12} />
-              AI Styling Synthesis
+              AI Style Recommendations
             </button>
             <button
               onClick={() => setActiveTab("trajectory")}
@@ -113,7 +113,7 @@ function UserDashboardContent() {
               }`}
             >
               <Map size={12} />
-              Delivery Trajectory
+              Order Tracker
             </button>
           </div>
 
@@ -178,12 +178,12 @@ function UserDashboardContent() {
                   <GlassCard glowColor="rgba(255,255,255,0.06)">
                     <div className="mb-8 flex items-center justify-between border-b border-white/5 pb-4">
                       <div className="flex flex-col font-mono text-[9px] uppercase">
-                        <span className="text-white font-bold">Secure trajectory feed</span>
-                        <span className="text-zinc-500">ORDER REFD: #PCI-2950-A</span>
+                         <span className="text-white font-bold">Delivery Status Feed</span>
+                         <span className="text-zinc-500">ORDER ID: #PCI-2950-A</span>
                       </div>
                       <span className="flex items-center gap-1.5 rounded bg-emerald-500/10 px-2.5 py-1 text-[8px] font-mono font-bold uppercase tracking-widest text-emerald-400">
                         <Compass size={10} className="animate-spin" />
-                        EN ROUTE: SECTOR 4
+                         IN TRANSIT: EXPEDITED
                       </span>
                     </div>
 

@@ -24,18 +24,18 @@ export const Hero: React.FC = () => {
       {/* Dynamic radial shadow overlays for depth */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.1)_20%,rgba(5,5,7,0.7)_80%)]" />
 
-      {/* Floating System HUD (Outer metrics to make it look like a cockpit or visor overlay) */}
+      {/* Floating Brand HUD (Outer performance metrics) */}
       <div className="absolute inset-x-6 top-28 z-10 flex items-center justify-between text-[8px] font-mono uppercase tracking-widest text-zinc-500 hidden md:flex">
         <div className="flex flex-col gap-1.5">
           <span className="flex items-center gap-1.5">
             <Heart size={10} className="text-zinc-600 animate-pulse" />
-            HEART_SYNC: 84 BPM
+            HEART RATE: 72 BPM
           </span>
-          <span>ATMOSPHERE: NEBULA-DENSE</span>
+          <span>LOCATION: LAB CORE SECTOR</span>
         </div>
         <div className="flex flex-col gap-1.5 text-right">
           <span>COORDINATES: 48° 52' N | 2° 21' E</span>
-          <span className="text-white/40">CALIBRATING APPAREL SHELL...</span>
+          <span className="text-white/40">CALIBRATING APPAREL FIT...</span>
         </div>
       </div>
 
@@ -53,7 +53,7 @@ export const Hero: React.FC = () => {
             className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[9px] font-black uppercase tracking-widest text-white shadow-inner backdrop-blur-md"
           >
             <Sparkles size={11} className="text-white" />
-            PCI LABS INITIALIZATION COMPLETE
+            PCI ELITE SYSTEM ACTIVE
           </motion.div>
 
           {/* Huge Brand Headline with custom HSL glowing accents */}
@@ -72,7 +72,7 @@ export const Hero: React.FC = () => {
             variants={itemVariants}
             className="max-w-md text-xs leading-relaxed text-zinc-500 uppercase tracking-widest sm:max-w-lg"
           >
-            Forging space-tech garments engineered with dynamic thermal matrices and zonal biometrics compression. Designed for the athlete of the future.
+            Premium activewear designed for peak athletic performance. Engineered with advanced breathable fabrics and comfortable zonal compression support.
           </motion.p>
 
           {/* Action CTAs */}
@@ -97,34 +97,34 @@ export const Hero: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Floating telemetry widget at bottom right */}
+      {/* Floating metrics widget at bottom right */}
       <div className="absolute bottom-12 right-8 z-10 rounded-xl border border-white/5 bg-zinc-950/40 p-4 font-mono text-[9px] text-zinc-500 uppercase tracking-widest hidden lg:block">
         <div className="mb-2 flex items-center justify-between border-b border-white/5 pb-2 text-white">
           <span className="flex items-center gap-1">
             <Shield size={10} className="text-zinc-400" />
-            VISOR SHELL SYSTEM
+            PCI LAB SYSTEM
           </span>
-          <span className="text-[7px]">GRID SYNC</span>
+          <span className="text-[7px]">ONLINE</span>
         </div>
         <div className="flex flex-col gap-1.5">
           <div className="flex justify-between gap-8">
-            <span>Core Compression</span>
-            <span className="text-white">Active (Zonal)</span>
+            <span>Compression Fit</span>
+            <span className="text-white">Optimal Level</span>
           </div>
           <div className="flex justify-between gap-8">
-            <span>Thermal Insulation</span>
-            <span className="text-white">Optimized (L1)</span>
+            <span>Mesh Breathability</span>
+            <span className="text-white">Active Vents</span>
           </div>
           <div className="flex justify-between gap-8">
-            <span>Zero-G Stabilization</span>
-            <span className="text-white">Standby</span>
+            <span>Impact Cushioning</span>
+            <span className="text-white">Carbon Plate</span>
           </div>
         </div>
       </div>
 
       {/* Scroll Down mouse animation at bottom center */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[8px] font-mono uppercase tracking-widest text-zinc-500 hidden sm:flex">
-        <span>Scroll to Calibrate</span>
+        <span>Scroll to Explore</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}

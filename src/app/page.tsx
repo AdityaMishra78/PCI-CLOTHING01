@@ -18,7 +18,7 @@ export default function HomePage() {
   useSmoothScroll(); // Initialize Lenis smooth scroll
   const [isLoading, setIsLoading] = useState(true);
   const [loadingProgress, setLoadingProgress] = useState(0);
-  const [loadingLabel, setLoadingLabel] = useState("CALIBRATING SPACE CORRIDORS...");
+  const [loadingLabel, setLoadingLabel] = useState("LOADING PLATFORM...");
 
   useEffect(() => {
     // Simulated system diagnostic bootloader progress
@@ -33,9 +33,9 @@ export default function HomePage() {
         }
 
         const next = prev + 4;
-        if (next === 24) setLoadingLabel("RESOLVING BIOMETRIC SEAMS GRID...");
-        if (next === 52) setLoadingLabel("INITIALIZING 3D WEBGL MANNEQUIN...");
-        if (next === 80) setLoadingLabel("SYNC ESTABLISHED. DEPLOYING APPAREL SHELL...");
+        if (next === 24) setLoadingLabel("CONFIGURING APPAREL LAYOUT...");
+        if (next === 52) setLoadingLabel("PREPARING 3D INTERACTIVE MANNEQUIN...");
+        if (next === 80) setLoadingLabel("ESTABLISHING CONNECTION. DEPLOYING WEBSITE...");
         return next;
       });
     }, 70);
@@ -67,7 +67,7 @@ export default function HomePage() {
               {/* Progress Text */}
               <div className="flex flex-col items-center gap-1.5 text-center">
                 <span className="text-[10px] font-bold tracking-widest text-white uppercase animate-pulse">
-                  PCI SYSTEMS INITIALIZING...
+                  PCI WEBSITE LOADING...
                 </span>
                 <span className="text-[8px] text-zinc-500 uppercase tracking-widest leading-relaxed">
                   {loadingLabel}
@@ -82,7 +82,7 @@ export default function HomePage() {
                 />
               </div>
 
-              <span className="text-[9px] text-zinc-500">{loadingProgress}% BOOT_SECURE</span>
+              <span className="text-[9px] text-zinc-500">{loadingProgress}% COMPLETE</span>
             </div>
           </motion.div>
         )}

@@ -14,15 +14,15 @@ export interface Product {
 export const products: Product[] = [
   {
     id: "aether-top",
-    name: "Aether-01 Compression",
+    name: "PCI Elite Compression Top",
     collection: "Aether Series",
     price: 185,
-    description: "Engineered for extreme heat dispersion with real-time thermo-regulating micro-grid structure. Polished metallic seams adapt dynamically to biomechanical stretching, providing secondary joint support.",
+    description: "Designed for high-performance training with advanced moisture-wicking fabric that keeps you cool and dry. Seamless construction prevents chafing and moves naturally with your body.",
     specs: [
-      "Thermo-regulating adaptive grid",
-      "8-way quantum elasticity",
-      "Seamless ultrasonic bonded seams",
-      "Embossed glowing PCI chest logo"
+      "Moisture-wicking mesh ventilation",
+      "Four-way stretch for maximum mobility",
+      "Friction-free flatlock seams",
+      "Reflective premium PCI chest logo"
     ],
     colors: [
       { name: "Stealth Black", hex: "#0b0b0d", threeHex: "#050505" },
@@ -30,20 +30,20 @@ export const products: Product[] = [
       { name: "Cyber Silver", hex: "#8a8d96", threeHex: "#7a7e85" }
     ],
     sizes: ["XS", "S", "M", "L", "XL"],
-    features: "Hyper-compressive performance layer designed to accelerate blood flow and minimize muscle vibration during high-g kinetic training.",
+    features: "Lightweight compression fit that supports muscles, increases blood circulation, and reduces fatigue during intense workouts.",
     imageUrl: "/products/aether_top.png"
   },
   {
     id: "nebula-jacket",
-    name: "Nebula Active Shell",
+    name: "PCI Premium Windbreaker",
     collection: "Nebula Active",
     price: 340,
-    description: "Ultra-light atmospheric shell featuring hydrophobic outer membranes and glow-in-the-dark aurora light piping. Designed to sustain core thermal equilibrium in severe environmental conditions.",
+    description: "An ultra-lightweight, water-resistant windbreaker with sleek reflective accents for nighttime safety. Made with high-durability fabrics to protect you against harsh weather.",
     specs: [
-      "Hydrophobic 3-layer laminated shell",
-      "Dynamic phosphorescent panels",
-      "Fidlock® magnetic zip closures",
-      "Cinematic helmet-compatible hood"
+      "Water-resistant three-layer shell",
+      "High-visibility reflective safety panels",
+      "Magnetic zipper locks",
+      "Adjustable ergonomic hood"
     ],
     colors: [
       { name: "Stealth Black", hex: "#0b0b0d", threeHex: "#020202" },
@@ -51,80 +51,80 @@ export const products: Product[] = [
       { name: "Silver Aurora", hex: "#b4c3d4", threeHex: "#a0b2c6" }
     ],
     sizes: ["S", "M", "L", "XL"],
-    features: "Aesthetic storm-proofing. The breathable nano-pore technology permits sweat molecules to evaporate while preventing liquid penetration.",
+    features: "Breathable storm protection. Allows sweat and body heat to escape while keeping wind and light rain completely out.",
     imageUrl: "/products/nebula_jacket.png"
   },
   {
     id: "quantum-tights",
-    name: "Quantum Comp Tights",
+    name: "PCI Compression Tights",
     collection: "Aether Series",
     price: 195,
-    description: "Zonal compression tights engineered to stabilize critical muscle groups. Smart fabric mapping targets quad, hamstring, and calf bands to reduce lactic build-up.",
+    description: "Zonal compression tights that support major muscle groups. Designed with moisture-wicking fabric and flat seams to keep you comfortable during long runs.",
     specs: [
-      "Zonal kinetic muscle mapping",
-      "Liquid-metal compression bands",
+      "Zonal calf and quad support",
+      "Comfort elastic waistband",
       "Breathable honeycomb moisture vents",
-      "Laser-cut biometric device holster"
+      "Secure side pocket for phone or keys"
     ],
     colors: [
       { name: "Stealth Black", hex: "#0b0b0d", threeHex: "#050505" },
       { name: "Silver Line", hex: "#94a3b8", threeHex: "#8894a6" }
     ],
     sizes: ["XS", "S", "M", "L", "XL"],
-    features: "Reinforced elastic bands simulate natural ligament support to stabilize knee tracking under strenuous athletic strain.",
+    features: "Reinforced support panels that stabilize your knees and joints during heavy leg training.",
     imageUrl: "/products/quantum_tights.png"
   },
   {
     id: "chronos-joggers",
-    name: "Chronos Grid Trousers",
+    name: "PCI Articulated Joggers",
     collection: "Chronos Street",
     price: 265,
-    description: "Structured high-end streetwear pant utilizing geometric paneled construction. Articulated knee joints and heavy-weave mesh provide high mobility for both athletic and streetwear environments.",
+    description: "Premium streetwear joggers with comfortable geometric paneling. Articulated knees provide high freedom of movement for both casual outings and intense workouts.",
     specs: [
-      "Abrasion-resistant technical weave",
-      "Kinetic joint articulation panels",
-      "Polished titanium drawstring toggles",
-      "Shielded magnetic cargo chambers"
+      "Durable water-resistant woven fabric",
+      "Articulated knees for natural bending",
+      "Anodized metal lace tips",
+      "Secure zippered cargo pockets"
     ],
     colors: [
       { name: "Stealth Black", hex: "#0b0b0d", threeHex: "#050505" },
       { name: "Titanium White", hex: "#f1f1f5", threeHex: "#ffffff" }
     ],
     sizes: ["S", "M", "L", "XL"],
-    features: "Intertwines aggressive tech-wear aesthetic with highly functional running mobility. Relaxed fit tapering into clean glowing ankle bands.",
+    features: "Blends aggressive streetwear styling with high-performance utility. Relaxed fit tapering into clean, snug ankle cuffs.",
     imageUrl: "/products/chronos_joggers.png"
   },
   {
     id: "quantum-anorak",
-    name: "Vented Mesh Anorak",
+    name: "PCI Vented Running Hoody",
     collection: "Quantum Elite",
     price: 380,
-    description: "Premium windbreaker designed with laser-perforated chest flaps that lift slightly in motion to guide fresh air across core zones. Superhydrophobic finish protects against the elements.",
+    description: "Premium athletic hoody featuring laser-cut ventilation ports. Designed to regulate body temperature dynamically as you build up heat during your run.",
     specs: [
-      "Kinetic heat-activated venting",
-      "Nano-engineered hydrophobic finish",
-      "Secure double-compartment front pouch",
-      "Reflective holographic branding lines"
+      "Laser-cut underarm ventilation",
+      "Water-repellent durable coating",
+      "Front utility storage pouch",
+      "Reflective branding stripes"
     ],
     colors: [
       { name: "Carbon Black", hex: "#18181b", threeHex: "#0e0e10" },
       { name: "Pure Titanium", hex: "#e2e8f0", threeHex: "#cbd5e1" }
     ],
     sizes: ["S", "M", "L"],
-    features: "Extremely high breathability profile. Features a futuristic aesthetic with clean geometric lines, giving standard sportswear an architectural silhouette.",
+    features: "High breathability running apparel. Features clean geometric lines to offer a modern, architectural athletic look.",
     imageUrl: "/products/quantum_anorak.png"
   },
   {
     id: "nebula-runner",
-    name: "Nebula Kinetic Runner",
+    name: "PCI Carbon Flight Runner",
     collection: "Nebula Active",
     price: 420,
-    description: "Next-generation running shoe equipped with a structural carbon-fiber acceleration plate. Kinetic cushion technology compresses on impact and delivers an explosive energy response.",
+    description: "Next-generation running shoe equipped with a structural carbon-fiber plate. Our responsive cushion foam absorbs impact and spring-loads your next stride.",
     specs: [
-      "3D contoured carbon-fiber plate",
-      "Interactive kinetic LED-reactive foam",
-      "Shatterproof micro-cleat grip matrix",
-      "High-tensile seamless matrix knit"
+      "Energy-return carbon fiber plate",
+      "Ultra-responsive cushion midsole",
+      "High-traction rubber grip sole",
+      "Seamless and breathable knit upper"
     ],
     colors: [
       { name: "Stealth Void", hex: "#050506", threeHex: "#010102" },
@@ -132,7 +132,7 @@ export const products: Product[] = [
       { name: "Galactic Silver", hex: "#cbd5e1", threeHex: "#94a3b8" }
     ],
     sizes: ["7", "8", "9", "10", "11", "12"],
-    features: "Propulsive footwear technology. Features real-time responsive cushioning that stiffens at high speeds to support aggressive cornering and landing stabilization.",
+    features: "Propulsive running footwear. Stiffens at high speeds to support stable landings and quick turns.",
     imageUrl: "/products/nebula_runner.png"
   }
 ];

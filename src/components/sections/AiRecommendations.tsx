@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Sparkles, Activity, ShieldAlert, Cpu, Heart, Check, Plus } from "lucide-react";
+import { Sparkles, Activity, Cpu, Heart, Check, Plus } from "lucide-react";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { products, Product } from "@/utils/products";
 import { useCart } from "@/context/CartContext";
@@ -23,21 +23,21 @@ export const AiRecommendations: React.FC = () => {
   } | null>(null);
 
   const goals = [
-    { id: "endurance", label: "Deep Space Endurance", icon: Heart },
-    { id: "agility", label: "Quantum Agility", icon: Activity },
-    { id: "recovery", label: "Nebula Core Recovery", icon: Cpu },
+    { id: "endurance", label: "Cardio & Endurance", icon: Heart },
+    { id: "agility", label: "Speed & Agility", icon: Activity },
+    { id: "recovery", label: "Muscle Recovery", icon: Cpu },
   ];
 
   const envs = [
-    { id: "zero-g", label: "Void Zero-G" },
-    { id: "urban", label: "Urban Sector Grid" },
-    { id: "cold", label: "Nebula Frost Front" },
+    { id: "zero-g", label: "Indoor Training" },
+    { id: "urban", label: "Outdoor City Running" },
+    { id: "cold", label: "Cold Weather Training" },
   ];
 
   const handleScan = () => {
     setIsScanning(true);
     setScanProgress(0);
-    setScanLabel("SCANNING CARDIOVASCULAR FREQUENCY...");
+    setScanLabel("ANALYZING WORKOUT PROFILE...");
 
     // Animate scanning progress steps
     const interval = setInterval(() => {
@@ -46,38 +46,38 @@ export const AiRecommendations: React.FC = () => {
           clearInterval(interval);
           setTimeout(() => {
             // Generate Outfit based on selections
-            let top = products[0]; // default aether top
-            let bottom = products[2]; // default quantum tights
+            let top = products[0]; // default top
+            let bottom = products[2]; // default tights
             let footwear = products[5]; // default runner
             let description = "";
             let stats = [];
 
             if (selectedGoal === "endurance") {
-              top = products[0]; // Aether Top
-              bottom = products[2]; // Quantum Tights
-              description = "Engineered for long-duration compression and thermal homeostasis in low atmospheric loads.";
+              top = products[0]; // Elite Compression Top
+              bottom = products[2]; // Compression Tights
+              description = "Perfect for long runs and intense stamina training, keeping you cool and supported.";
               stats = [
-                { name: "Thermo-Regulation", val: 98 },
-                { name: "Lactic Dispersion", val: 94 },
-                { name: "Aerodynamics", val: 82 },
+                { name: "Breathability", val: 98 },
+                { name: "Muscle Support", val: 94 },
+                { name: "Flexibility", val: 82 },
               ];
             } else if (selectedGoal === "agility") {
-              top = products[4]; // Vented Anorak
-              bottom = products[3]; // Chronos Joggers
-              description = "High mobility joints combined with dynamic heat-release vents for fast kinetic maneuvering.";
+              top = products[4]; // Vented Running Hoody
+              bottom = products[3]; // Articulated Joggers
+              description = "Flexible and highly breathable outfit designed for quick movements and outdoor training.";
               stats = [
-                { name: "Thermo-Regulation", val: 86 },
-                { name: "Lactic Dispersion", val: 78 },
-                { name: "Aerodynamics", val: 96 },
+                { name: "Breathability", val: 86 },
+                { name: "Muscle Support", val: 78 },
+                { name: "Flexibility", val: 96 },
               ];
             } else {
-              top = products[1]; // Nebula Active Shell
-              bottom = products[3]; // Chronos Joggers
-              description = "Sustained insulating fabrics and cellular repair compression lining optimized for fast warmups.";
+              top = products[1]; // Premium Windbreaker
+              bottom = products[3]; // Articulated Joggers
+              description = "Comfortable, insulated layers to keep you warm and help your muscles recover faster after workouts.";
               stats = [
-                { name: "Thermo-Regulation", val: 99 },
-                { name: "Lactic Dispersion", val: 85 },
-                { name: "Aerodynamics", val: 70 },
+                { name: "Breathability", val: 99 },
+                { name: "Muscle Support", val: 85 },
+                { name: "Flexibility", val: 70 },
               ];
             }
 
@@ -88,9 +88,9 @@ export const AiRecommendations: React.FC = () => {
         }
 
         const next = prev + 5;
-        if (next === 30) setScanLabel("DECRPYTING LIGAMENT VELOCITY...");
-        if (next === 65) setScanLabel("ALIGNED THERMO-REGULATORY FREQUENCY...");
-        if (next === 85) setScanLabel("STRUCTURING HOLOGRAPHIC FABRIC MATRIX...");
+        if (next === 30) setScanLabel("CHECKING RECOVERY STATS...");
+        if (next === 65) setScanLabel("DETERMINING BREATHABILITY NEEDS...");
+        if (next === 85) setScanLabel("SELECTING RECOMMENDED COORDINATES...");
         return next;
       });
     }, 80);
@@ -106,13 +106,13 @@ export const AiRecommendations: React.FC = () => {
         <div className="mb-12 text-center">
           <div className="mx-auto mb-3 flex w-fit items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[9px] font-black uppercase tracking-widest text-white shadow-inner">
             <Sparkles size={11} className="text-white" />
-            AI DIAGNOSTIC CONSOLE
+            AI STYLE ASSISTANT
           </div>
           <h2 className="text-2xl font-black uppercase tracking-widest text-white md:text-3xl font-sans">
-            AI Biometric Styling
+            Find Your Perfect Outfit
           </h2>
           <p className="mx-auto mt-2 max-w-lg text-xs leading-relaxed text-zinc-500 uppercase tracking-widest">
-            Calibrate sportswear fabric matrix boundaries relative to biological trajectories.
+            Answer two simple questions to get personalized sportswear recommendations.
           </p>
         </div>
 
@@ -121,14 +121,14 @@ export const AiRecommendations: React.FC = () => {
           <div className="md:col-span-5 flex flex-col gap-6">
             <GlassCard className="flex flex-col gap-6" glowColor="rgba(255,255,255,0.06)">
               <div className="flex flex-col">
-                <span className="text-xs font-bold uppercase tracking-widest text-white">Biometric Settings</span>
-                <span className="text-[9px] font-mono text-zinc-500 uppercase">Step 01: Profile Alignment</span>
+                <span className="text-xs font-bold uppercase tracking-widest text-white">Outfit Settings</span>
+                <span className="text-[9px] font-mono text-zinc-500 uppercase">Step 01: Select Preferences</span>
               </div>
 
               {/* Goal Selector */}
               <div className="flex flex-col gap-3">
                 <label className="text-[10px] font-mono uppercase tracking-wider text-zinc-400">
-                  Target Trajectory Goal
+                  Select Your Main Workout Goal
                 </label>
                 <div className="flex flex-col gap-2">
                   {goals.map((g) => {
@@ -159,7 +159,7 @@ export const AiRecommendations: React.FC = () => {
               {/* Environment Selector */}
               <div className="flex flex-col gap-3">
                 <label className="text-[10px] font-mono uppercase tracking-wider text-zinc-400">
-                  Atmospheric Core Sector
+                  Select Your Training Environment
                 </label>
                 <div className="grid grid-cols-3 gap-2">
                   {envs.map((e) => {
@@ -189,7 +189,7 @@ export const AiRecommendations: React.FC = () => {
                 className="mt-4 relative flex w-full items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 py-4 text-xs font-black uppercase tracking-widest text-white shadow-md transition-all duration-300 hover:bg-white hover:text-black hover:border-white hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]"
               >
                 <Activity size={14} className={isScanning ? "animate-pulse" : ""} />
-                Synthesize Coordinates
+                Generate Outfit Recommendations
               </button>
             </GlassCard>
           </div>
@@ -222,7 +222,7 @@ export const AiRecommendations: React.FC = () => {
                       style={{ width: `${scanProgress}%` }}
                     />
                   </div>
-                  <span className="mt-2 text-[10px] text-zinc-500">{scanProgress}% SECURE_LOCK</span>
+                  <span className="mt-2 text-[10px] text-zinc-500">{scanProgress}% RUNNING ANALYSIS</span>
                 </motion.div>
               ) : recommendedOutfit ? (
                 /* Recommendation Result Display */
@@ -237,10 +237,10 @@ export const AiRecommendations: React.FC = () => {
                     <div className="flex items-center justify-between border-b border-white/5 pb-4">
                       <div className="flex flex-col">
                         <span className="text-xs font-bold uppercase tracking-widest text-white">
-                          Synthesized Alignment Successful
+                          Best Outfit Recommendation
                         </span>
                         <span className="text-[9px] font-mono text-zinc-500 uppercase">
-                          MATCH CODES ESTABLISHED
+                          Recommended Gear
                         </span>
                       </div>
                       <span className="rounded-full bg-emerald-500/10 px-2.5 py-1 text-[8px] font-mono font-bold uppercase tracking-wider text-emerald-400">
@@ -277,7 +277,7 @@ export const AiRecommendations: React.FC = () => {
                     {/* Outfit Coordinate Grid */}
                     <div className="flex flex-col gap-4">
                       <span className="text-[9px] font-mono uppercase tracking-widest text-zinc-500">
-                        Recommended Coordinates
+                        Recommended Gear Coordinates
                       </span>
                       <div className="grid gap-4 sm:grid-cols-2">
                         {/* Top Product */}
@@ -352,10 +352,10 @@ export const AiRecommendations: React.FC = () => {
                 <div className="h-full flex flex-col items-center justify-center rounded-2xl border border-white/5 bg-zinc-950/20 p-8 text-center">
                   <Activity size={24} className="mb-4 text-zinc-700" />
                   <span className="text-xs font-mono uppercase tracking-widest text-zinc-500">
-                    Console Off
+                    Console Standby
                   </span>
                   <p className="mx-auto mt-1 max-w-xs text-[10px] uppercase tracking-widest text-zinc-600">
-                    Input Biometric Settings and trigger synthesis mapping to activate console coordinate feed.
+                    Select your goals and trigger the scan to receive personalized recommendations.
                   </p>
                 </div>
               )}

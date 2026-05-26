@@ -21,18 +21,18 @@ export const CartDrawer: React.FC = () => {
 
   const handleCheckout = () => {
     setIsCheckingOut(true);
-    setCheckoutStep("SYNCHRONIZING SECURE PAYMENT NODE...");
+    setCheckoutStep("PROCESSING SECURE PAYMENT...");
 
     setTimeout(() => {
-      setCheckoutStep("CONFIRMING BIOMETRIC CLEARANCE...");
+      setCheckoutStep("VERIFYING TRANSACTION...");
       setTimeout(() => {
-        setCheckoutStep("ORDER LOGGED IN QUANTUM TRAJECTORY!");
+        setCheckoutStep("ORDER SUCCESSFULLY PLACED!");
         setTimeout(() => {
           setIsCheckingOut(false);
           setCheckoutStep("");
           clearCart();
           setCartOpen(false);
-          alert("Order established successfully! Trajectory logged in Performance Lab.");
+          alert("Thank you! Your order has been placed. You can track it in your Dashboard.");
         }, 1500);
       }, 1500);
     }, 1500);
@@ -62,9 +62,9 @@ export const CartDrawer: React.FC = () => {
             {/* Header */}
             <div className="flex items-center justify-between border-b border-white/5 pb-4">
               <div className="flex flex-col">
-                <span className="text-sm font-bold uppercase tracking-widest text-white">Cart Chamber</span>
+                <span className="text-sm font-bold uppercase tracking-widest text-white">Your Shopping Bag</span>
                 <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">
-                  Secure Quantum Locker
+                  Secure Checkout
                 </span>
               </div>
               <button
@@ -95,10 +95,10 @@ export const CartDrawer: React.FC = () => {
                   {cartItems.length === 0 ? (
                     <div className="flex h-full flex-col items-center justify-center gap-2 text-center">
                       <span className="text-xs font-mono uppercase tracking-widest text-zinc-500">
-                        Chamber Empty
+                        Your Bag is Empty
                       </span>
                       <p className="max-w-xs text-[10px] text-zinc-600 uppercase tracking-wider">
-                        Load futuristic sportswear coordinates to activate.
+                        Browse our collections to find your perfect sportswear.
                       </p>
                     </div>
                   ) : (
@@ -204,15 +204,15 @@ export const CartDrawer: React.FC = () => {
                   <div className="border-t border-white/5 pt-4">
                     <div className="flex flex-col gap-2 font-mono text-[10px] text-zinc-400 uppercase">
                       <div className="flex justify-between">
-                        <span>Locker Subtotal</span>
+                        <span>Subtotal</span>
                         <span className="text-white">${totalPrice}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span>Space Clearance Tax</span>
-                        <span className="text-white">$0.00 (EXEMPT)</span>
+                        <span>Shipping</span>
+                        <span className="text-white">FREE</span>
                       </div>
                       <div className="flex justify-between border-t border-white/5 pt-2 text-xs font-bold text-white">
-                        <span>Total Charge</span>
+                        <span>Total</span>
                         <span>${totalPrice}</span>
                       </div>
                     </div>
@@ -225,7 +225,7 @@ export const CartDrawer: React.FC = () => {
                     >
                       <span className="flex items-center gap-2">
                         <ShieldCheck size={14} />
-                        Execute Checkout
+                        Proceed to Checkout
                       </span>
                       <ArrowRight size={14} />
                     </button>
